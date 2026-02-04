@@ -1,152 +1,141 @@
-
 <!DOCTYPE html>
 <html lang="zh-tw">
-    <head>
-		<meta charset="UTF-8" />
-        <title>Login</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
 
+    <link rel="stylesheet" type="text/css" href="https://www.ccsh.ptc.edu.tw/source/include/CustomLoginFormStyling/css/style.css" />
 
+    <!--[if lte IE 7]>
+    <style>
+        .main { display:none; }
+        .support-note .note-ie { display:block; }
+    </style>
+    <![endif]-->
 
+    <style>
+        body {
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            background-color: #7f9b4e;
+            background-image: url(https://www.ccsh.ptc.edu.tw/source/include/CustomLoginFormStyling/images/login/1.jpg);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
 
+        .container > header h1,
+        .container > header h2 {
+            color: #fff;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.7);
+        }
 
+        .form-4 .log-twitter {
+            width: 100%;
+            height: 38px;
+            float: left;
+            position: relative;
+            box-shadow: inset 0 1px rgba(255,255,255,0.3);
+            border-radius: 3px;
+            cursor: pointer;
+            font-family: 'Lato', Calibri, Arial, sans-serif;
+            font-size: 14px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 14px;
+        }
 
+        .form-4 input[type=submit] {
+            background: #fbd568;
+            background: linear-gradient(#fbd568, #ffb347);
+            border: 1px solid #f4ab4c;
+            color: #996319;
+            text-shadow: 0 1px rgba(255,255,255,0.3);
+        }
 
+        .form-4 .log-twitter {
+            margin-right: 1%;
+            background: linear-gradient(#34a5cf, #2a8ac4);
+            border: 1px solid #2b8bc7;
+            color: #ffffff;
+            text-shadow: 0 -1px rgba(0,0,0,0.3);
+            text-decoration: none;
+        }
 
-<link rel="stylesheet" type="text/css" href="https://www.ccsh.ptc.edu.tw/source/include/CustomLoginFormStyling/css/style.css" />
-<!--[if lte IE 7]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->    
-<style>
-body {
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
-	background-color: #7f9b4e;
-	background-image: url(https://www.ccsh.ptc.edu.tw/source/include/CustomLoginFormStyling/images/login/1.jpg);
-	background-repeat: no-repeat;
-	background-position: center bottom;
-}
-.container > header h1,
-.container > header h2 {
-	color: #fff;
-	text-shadow: 0 1px 1px rgba(0,0,0,0.7);
-}
-.form-4 .log-twitter {
-	/* Size and position */
-	width: 100%;
-	height: 38px;
-	float: left;
-	position: relative;
-	/* Styles */
-	box-shadow: inset 0 1px rgba(255,255,255,0.3);
-	border-radius: 3px;
-	cursor: pointer;
-	/* Font styles */
-	font-family: 'Lato', Calibri, Arial, sans-serif;
-	font-size: 14px;
+        .form-4 input[type=submit]:hover,
+        .form-4 .log-twitter:hover {
+            box-shadow:
+                inset 0 1px rgba(255,255,255,0.3),
+                inset 0 20px 40px rgba(255,255,255,0.15);
+        }
 
-	text-align: center;
-	font-weight: bold;
-	margin-bottom: 14px;
-}
+        .form-4 input[type=submit]:active,
+        .form-4 .log-twitter:active {
+            top: 1px;
+        }
+    </style>
+</head>
 
-.form-4 input[type=submit] {
-    background: #fbd568; /* Fallback */
-    background: -moz-linear-gradient(#fbd568, #ffb347);
-    background: -ms-linear-gradient(#fbd568, #ffb347);
-    background: -o-linear-gradient(#fbd568, #ffb347);
-    background: -webkit-gradient(linear, 0 0, 0 100%, from(#fbd568), to(#ffb347));
-    background: -webkit-linear-gradient(#fbd568, #ffb347);
-    background: linear-gradient(#fbd568, #ffb347);
-    border: 1px solid #f4ab4c;
-    color: #996319;
-    text-shadow: 0 1px rgba(255,255,255,0.3);
-}
+<body>
 
-.form-4 .log-twitter {
-    margin-right: 1%;
-    background: #34a5cf; /* Fallback */
-    background: -moz-linear-gradient(#34a5cf, #2a8ac4);
-    background: -ms-linear-gradient(#34a5cf, #2a8ac4);
-    background: -o-linear-gradient(#34a5cf, #2a8ac4);
-    background: -webkit-gradient(linear, 0 0, 0 100%, from(#34a5cf), to(#2a8ac4));
-    background: -webkit-linear-gradient(#34a5cf, #2a8ac4);
-    background: linear-gradient(#34a5cf, #2a8ac4);
-    border: 1px solid #2b8bc7;
-    color: #ffffff;
-    text-shadow: 0 -1px rgba(0,0,0,0.3);
-    text-decoration: none;
-}
+<div class="container">
+    <header>
+        <h1>歡迎來到 <strong>會員登入</strong> 區</h1>
+        <h2>Login or Register</h2>
 
-.form-4 input[type=submit]:hover,
-.form-4 .log-twitter:hover {
-    box-shadow: 
-        inset 0 1px rgba(255,255,255,0.3), 
-        inset 0 20px 40px rgba(255,255,255,0.15);
-}
+        <nav class="codrops-demos">
+            <a class="current-demo">回網站首頁</a>
+            <a>加入會員</a>
+            <a>忘記密碼?</a>
+        </nav>
 
-.form-4 input[type=submit]:active,
-.form-4 .log-twitter:active{
-    top: 1px;
-}
-</style>
-
-
-        <div class="container">
-		
-			<header>
-			
-				<h1>歡迎來到 <strong>會員登入</strong> 區</h1>
-				<h2>Login or Register</h2>
-				
-				<nav class="codrops-demos">
-<!--					<a class="current-demo" href="index.html">Demo 1</a>
-					<a href="index2.html">Demo 2</a>
-					<a href="index3.html">Demo 3</a>-->
-                    <a class="current-demo">回網站首頁</a>
-					<a>加入會員</a>
-					<a>忘記密碼?</a>
-				</nav>
-
-				<div class="support-note">
-					<span class="note-ie">Sorry, only modern browsers.</span>
-				</div>
-                
-                                			</header>
-			
-			<section class="main">
-				<form class="form-4" method="post">
-				    <h2>請使用帳號、密碼進行登入</h2>
-				    <p>
-				        <label for="username">Username or email</label>
-				        <input name="username" type="text" required id="username" placeholder="Username" value="">
-				    </p>
-				    <p>
-				        <label for="password">Password</label>
-				        <input name='password' type="password" required placeholder="Password" value=""> 
-				    </p>
-
-
-                    <div class="log-twitter"> 
-                    <div align="center"> 
-					  <table border="0" align="center" cellpadding="0" cellspacing="3">
-                          <tr>
-                              <td style="padding-top:8px"><label for="remember">&nbsp;</label><input name="remember" type="checkbox" id="remember" value="1"  /></td>
-                              <td style="padding-top:3px">記住我的帳號密碼</td>
-                          </tr>
-                      </table>  
-					</div>
-                    </div>
-
-			        <p>
-				        <input type="submit" name="submit" value="登入">
-				    </p>       
-				</form>​
-			</section>
-			
+        <div class="support-note">
+            <span class="note-ie">Sorry, only modern browsers.</span>
         </div>
-        
-        
-        
-    </body>
+    </header>
+
+    <section class="main">
+        <form class="form-4" method="post" onsubmit="return loginFailRedirect(event);">
+            <h2>請使用帳號、密碼進行登入</h2>
+
+            <p>
+                <label for="username">Username or email</label>
+                <input name="username" type="text" required id="username" placeholder="Username">
+            </p>
+
+            <p>
+                <label for="password">Password</label>
+                <input name="password" type="password" required placeholder="Password">
+            </p>
+
+            <div class="log-twitter">
+                <div align="center">
+                    <table border="0" align="center" cellpadding="0" cellspacing="3">
+                        <tr>
+                            <td style="padding-top:8px">
+                                <input name="remember" type="checkbox" id="remember" value="1">
+                            </td>
+                            <td style="padding-top:3px">記住我的帳號密碼</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <p>
+                <input type="submit" name="submit" value="登入">
+            </p>
+        </form>
+    </section>
+</div>
+
+<script>
+function loginFailRedirect(e) {
+    e.preventDefault();              // 阻止表單送出
+    alert("登入錯誤");               // 顯示錯誤訊息
+    window.location.href = "https://www.ccsh.ptc.edu.tw/loginl.php"; // 強制跳轉
+    return false;
+}
+</script>
+
+</body>
 </html>
